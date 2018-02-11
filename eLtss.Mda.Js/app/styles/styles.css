@@ -1,0 +1,677 @@
+/* Styles */
+
+#app table.table {
+  border-bottom: none !important;
+  box-sizing: content-box;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #333;
+  font-size: 90%;
+  line-height: normal;
+  width: 100% !important;
+  border-color: grey;
+}
+
+#app table.table tr th {
+  padding: 10px 18px;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #eee 0%, #ccc 75%);
+  color: #333;
+  font-size: inherit;
+  line-height: 120%;
+  outline: none;
+  border-top: 0 solid #999;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px 2px 10px 5px;
+  border-left: none;
+}
+
+#app table.table tr td {
+  color: #333;
+  font-size: 115%;
+  line-height: normal;
+  box-sizing: content-box;
+  padding: 8px 10px;
+  display: table-cell;
+}
+
+div.panelBarItem div.bodyHidden {
+  height: 0px;
+  overflow: hidden;
+}
+
+div.panelBarItem div.bodyVisible {
+  height: auto;
+  overflow: visible;
+}
+
+div.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75)
+}
+
+div.content {
+  /*position: relative;
+  top: 25%;
+  left: 40%;*/
+  margin: 15% auto;
+  width: 30%;
+  min-width: 400px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+}
+
+div.above-container-to-avoid-ie-issue {
+  position: absolute;
+  padding: 0 20px 15px 0;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+fieldset.fieldset-container-one > fieldset.fieldset-container-two{
+  margin-top: 10px;
+}
+
+fieldset.fieldset-container-one{
+  margin-top: 10px;
+}
+
+fieldset[class^="fieldset-container-"]:not(.fieldset-container-three){
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+}
+
+fieldset.fieldset-container-three{
+  border: none !important;
+}
+
+.dataTables_empty{
+  text-align: center;
+}
+
+/*Required Fields & Validation Styles
+----------------------------------------------------------*/
+
+.comments-textarea{
+  background: white;
+}
+input[type="text"], select, textarea{
+  background: #FFFFFF;
+}
+
+input[type="number"]{
+    border: 1px solid #999;
+}
+
+input[type="text"].required,
+input[type="password"].required,
+textarea.required:not(.readonly),
+select.required,
+a.required,
+.k-dropdown .k-dropdown-wrap .k-input.required,
+.k-combobox .k-dropdown-wrap .k-input.required, 
+.rdt.required>input.form-control{
+  background: #FFFF99 !important;
+}
+
+/*OneLineRadioButtons*/
+div.grouped-radiobuttons{
+  margin-bottom: 5px;
+}
+
+div.grouped-radiobuttons > div.row{
+  margin-bottom: 0 !important;
+}
+.row textarea:not(.k-input){
+  margin-left: 0;
+}
+
+/*Workspace positioning fix*/
+.workspace-content-container.reactWorkspace {
+  top:64px !important;
+}
+
+legend.legend-header-three{
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.row label, .row .label{
+  margin-left: 0;
+  width: 290px;
+}
+.row input[type="radio"] + label, .row input[type="radio"] + .label{
+  margin-left: 5px;
+}
+
+.row input[type="checkbox"] + label, .row input[type="checkbox"] + .label{
+  margin-left: 8px;
+}
+
+/* Signature */
+.autoResizeImage {
+    width: 100%;
+}
+
+.m-signature-pad{
+  color:#000;
+  border: solid 2px #cecece;
+  margin: 0 auto 10px auto;
+}
+
+.m-signature-pad
+  canvas {
+    width: 100%;
+    height: 100%;
+  } 
+
+.m-signature-pad > .m-signature-pad--footer{
+  border-top: 2px solid #cecece;
+  background: #ececec;
+  padding: 10px 5px 5px 5px;
+}
+
+.m-signature-pad > .m-signature-pad--footer >  button, .m-signature-pad > .m-signature-pad--footer >  input{
+  margin-right: 8px;
+}
+
+.m-signature-pad > .m-signature-pad--footer >  span.uploadContainer > label{
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+  overflow: none;
+}
+
+.m-signature-pad > .m-signature-pad--footer >  span.uploadContainer > input{
+  position: relative;
+  bottom: 1.5px;
+}
+
+.signatureContainer{
+  margin-bottom: 15px;
+}
+
+/* Fix for signature table */
+table.generalTable td > img {
+  max-width: 100%;
+}
+
+/* Schedule of Supports Calendar */
+div.bigCalContainer {
+  height: 600px;
+}
+
+.rbc-header{
+  background: #d3d3d3;
+  font-size: 105% !important;
+}
+
+.rbc-day-slot .rbc-event[style]{
+  left: 1%;
+  width: 94% !important;
+  border: 1px solid #2F6FA6;
+  margin-left: 4px;
+  background: #0098cf;
+  padding: 2px 3px;
+  -webkit-box-shadow: 3px 3px 17px 0px rgba(117,117,117,0.58);
+  -moz-box-shadow: 3px 3px 17px 0px rgba(117,117,117,0.58);
+  box-shadow: 3px 3px 17px 0px rgba(117,117,117,0.58);
+}
+
+.ReactModal__Overlay{
+  z-index: 499;
+}
+
+.ReactModal__Content {
+  z-index: 500;
+}
+
+.ReactModal__Content fieldset.fieldset-container-one{
+  margin: 0 auto;
+}
+
+.rbc-event > .rbc-event-label {
+  font-size: 12px;
+}
+
+.rbc-event{
+  z-index: 1;
+}
+
+.rbc-current-time-indicator{
+  /* Force current time indicator 
+  to sit above event elements */
+  z-index: 10 !important;
+}
+
+.rbc-allday-cell, .rbc-header-gutter, .rbc-time-slot {
+  background: white;
+}
+
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  width: 206px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+  color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+
+.rdtCounters {
+  display: inline-block;
+}
+
+.rdt {
+  display: inline-block;
+}
+
+.rdtCounters > div {
+  float: left;
+}
+
+.rdtCounter {
+  height: 100px;
+}
+
+.rdtCounter {
+  width: 40px;
+}
+
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+
+.rdtPicker{
+  background: #cecece;
+}
+
+.rdtp-fix > div {
+  display: inline-block;
+}
+
+.ReactModal__Overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+table a{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.addGeneralEvent{
+  width: 698px;
+  height: 425px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px; 
+}
+
+.addSupportModal{
+  width: 1000px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+.providerSearchModal{
+  width: 1000px;
+  height: 80%;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto; 
+  border-radius: 4px;
+  outline: none;
+}
+.providerSearchModal .confirm-title + div {
+  padding: 20px;
+}
+
+.supportsPackageEditModal{
+  width: 800px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto; 
+  border-radius: 4px;
+  outline: none;
+  padding: 0 0 10px 0;
+}
+
+.supportsPackageEditModal > .searchspace-footer-bar > .float-right{
+  margin-right: 10px;
+}
+
+.supportsPackageTable > tbody {
+  font-size: 100%;
+}
+
+.attachFileModal{
+  width: 600px;
+   border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: hidden; 
+  border-radius: 4px;
+  outline: none;
+}
+
+.providerSearchTableWrapper {
+  max-height: 450px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  
+}
+
+.providerSearchModal table.generalTable {
+  border: 1px solid #d3d3d3;
+  margin: 22px auto 0 auto;
+}
+
+
+.providerSearchModal table.generalTable + div.dataTableInfoPanel {
+  background: rgb(221, 221, 221);
+  padding: 5px;
+  font-size: 95%;
+}
+
+
+fieldset.fieldset-container-four fieldset.fieldset-container-four{
+  background: transparent !important;
+  border: none !important;
+  margin-top: 0;
+}
+
+fieldset.fieldset-container-four table.generalTable{
+  margin: 10px auto 0 auto;
+}
+
+.rbc-allday-cell{
+  width: 92.5% !important;
+}
+#workspace .react-full-workspace {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: white;
+}
+.react-full-workspace .public_fixedDataTableCell_cellContent
+{
+  padding: 2px;
+  font-weight: 300;
+  font-family: arial,Verdana,Helvetica,Sans-Serif;
+  white-space: nowrap!important;
+}
+.react-full-workspace .searchspace-footer-bar
+{
+  height:53px!important;
+  padding-top: 10px;
+}
+.fieldset-container-searcharea .p-column .stacked{
+  display: flex!important;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.fieldset-container-searcharea .p-column{
+  display: flex!important;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.workspace .public_fixedDataTableCell_cellContent
+{
+  padding: 2px;
+  font-weight: 300;
+  font-family: arial,Verdana,Helvetica,Sans-Serif;
+  white-space: nowrap!important;
+  
+}
+ .public_fixedDataTableCell_cellContent .SortHeaderCell {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+.fixedDataTableCellLayout_main {
+  border: 0;
+}
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  background-image: linear-gradient(to bottom,#eee 0%,#ccc 75%) !important;
+  border-bottom: 1px solid #999;
+  font-size: 0.94em;
+  border-right: 1px solid #999;
+}
+.SortHeaderCell{
+  white-space: normal!important;
+}
+
+@media screen and (max-width: 1200px) {
+  #workspace .workspace-content-container {
+    position: relative !important;
+    top: 0 !important;
+  }
+  .selection-summaryinfo h3 {
+    width: 90% !important;
+  }
+  #workspace .workspace {
+    overflow-y: auto;
+  }
+}

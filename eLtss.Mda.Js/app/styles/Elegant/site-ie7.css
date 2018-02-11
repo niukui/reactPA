@@ -1,0 +1,24 @@
+﻿/*Issue: Invisible link overlayed on top of the Global Header logo is not clickable because IE7 ignores containers without content or backgrounds (Transparent color does not work).
+  Fix: Added a background of a transparent image.*/
+.logo-link {
+    background: url(images/transparent.png) repeat scroll 0 0 transparent;
+}
+/*Issue: The margin set on the logo does not work on IE7
+  Fix: Added padding instead of margin.*/
+#logo img {
+    padding: 10px 0;
+}
+
+/*Issue: Pretty form uses the pseudo class :before and :after to render the CSS Radio Buttons and Checkboxes. IE7 does not use these Pseudo Classes. 
+  Fix: Show the standard IE7 Radio Buttons and Checkboxes.*/
+.pretty-form .radio input[type=radio],
+.pretty-form .checkbox input[type=checkbox]
+{
+    position: static;
+    left: 0;
+}
+.pretty-form .radio label,
+.pretty-form .checkbox label
+{
+    padding-left: 0;
+}

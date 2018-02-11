@@ -1,0 +1,36 @@
+export const LOAD_SECTION = 'section/LOAD_DATA';
+export const LOAD_SECTION_SUCCESS = 'section/LOAD_DATA_SUCCESS';
+
+export const SAVE_SECTION = 'section/SAVE_SECTION';
+export const SAVE_SECTION_SUCCESS = 'section/SAVE_SECTION_SUCCESS';
+
+export const UPDATE_FORM = 'section/UPDATE_FORM';
+export const UPDATE_FORM_SUCCESS = 'section/UPDATE_FORM_SUCCESS';
+
+export const INIT_COMPONENTS_REF_STATE = 'section/INIT_COMPONENTS_REF_STATE';
+export const REFRESH_COMPONENTS_REF_STATE = 'section/REFRESH_COMPONENTS_REF_STATE';
+
+export const UPDATE_VALIDATION_LIST = 'section/UPDATE_VALIDATION_LIST';
+export const CLEAR_VALIDATION_LIST = 'section/CLEAR_VALIDATION_LIST';
+
+export const LOAD_PROVIDER_SEARCH_CRITERIA_DATA='provider/LOAD_PROVIDER_SEARCH_CRITERIA_DATA';
+export const LOAD_PROVIDER_SEARCH_CRITERIA_DATA_SUCCESS='provider/LOAD_PROVIDER_SEARCH_RESULT_SUCCESS';
+
+export const SEARCH_PROVIDERS='provider/SEARCH_PROVIDERS';
+export const SEARCH_PROVIDERS_SUCCESS='provider/SEARCH_PROVIDERS_SUCCESS';
+
+export const PROVIDER_SELECTED='prodiver/PROVIDER_SELECTED';
+
+export const CONTINUE_BUTTON_SECTION = 'section/CONTINUE_BUTTON_SECTION';
+
+export const WIPE_OFF_STATE_DATA = 'section/WIPE_OFF_STATE_DATA';
+
+export const POC_PROGRAM_TYPE_LTSS = 'LTSS';
+export const POC_PROGRAM_TYPE_CWD = 'CWD';
+export const POC_SECTION_ESSENTIAL_INFORMATION = 'EssentialInformation';
+export const POC_SECTION_SHARED_PLANNING = 'SharedPlannings';
+export const POC_SECTION_PERSONAL_PROFILE = 'PersonalProfile';
+export const POC_SECTION_AGREEMENT = 'Agreement';
+export const POC_SECTION_OVERVIEW = 'Overview';
+
+

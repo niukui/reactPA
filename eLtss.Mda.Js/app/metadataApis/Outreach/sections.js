@@ -1,0 +1,682 @@
+  const sections= [
+    {
+      "Level": 0,
+      "Name": "Overview",
+      "DisplayName": "Overview",
+      "MultiEntry": false,
+      "CompleteRequired": true,
+      "Order": 10,
+      "Sections": [],
+      "Items": [
+        {
+          "Name": "FirstName",
+          "DataPath": "PersonName.FirstName",
+          "DisplayName": "First Name:",
+          "Type": "String",
+          "ValueType": "string", 
+          "ValueType": "LookupIdentifier",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "LastName",
+          "DataPath": "PersonName.LastName",
+          "DisplayName": "Last Name:",
+          "Type": "String",
+          "ValueType": "string",
+          "ValueType": "LookupIdentifier",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "DateOfBirth",
+          "DataPath": "DateOfBirth",
+          "DisplayName": "Date Of Birth:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "EnrollmentDate",
+          "DataPath": "EnrollmentDate",
+          "DisplayName": "Enrollment Date:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "TerminationDate",
+          "DataPath": "TerminationDate",
+          "DisplayName": "Termination Date:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "ProgramType",
+          "DataPath": "ProgramType.Name",
+          "DisplayName": "Program Type:",
+          "Type": "String",
+          "ValueType": "string",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "PlacementType",
+          "DataPath": "PlacementType.Name",
+          "DisplayName": "Placement Type:",
+          "Type": "String",
+          "ValueType": "string",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "AddedDate",
+          "DataPath": "AddedDate",
+          "DisplayName": "Date added to outreach queue:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "RemovedDate",
+          "DataPath": "RemovedDate",
+          "DisplayName": "Date removed from outreach queue:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "CheckedOutTo",
+           "DataPath": "CurrentCheckedInfo.CheckedOutTo",
+           "DisplayName": "Checked out to:",
+           "Type": "String",
+           "ValueType": "string",
+           "ValueType": "LookupIdentifier",
+           "IsRequired": false,
+           "ReadOnly": true,
+           "CompleteRequired": false,
+           "Validations": null,
+           "Order": 0
+        }, {
+          "Name": "Status",
+          "DataPath": "WorkflowStatus.DisplayName",
+          "DisplayName": "Status:",
+          "Type": "String",
+          "ValueType": "string",
+          "ValueType": "LookupIdentifier",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }
+      ]
+    }, 
+    {
+      "Level": 0,
+      "Name": "OutreachAttempts",
+      "DisplayName": "Outreach Attempt(s)",
+      "MultiEntry": false,
+      "CompleteRequired": false,
+      "Order": 10,
+      "Sections": [
+        {
+          "Level": 1,
+          "Name": "FirstAttempt",
+          "DisplayName": "First Attempt",
+          "LinkText":"Details",
+          "EditLink": "SectionEdit",
+          "MultiEntry": false,
+          "CompleteRequired": false,
+          "Order": 10,
+          "Sections":[],
+          "Items":[
+            {
+              "Name": "ContactResults",
+              "DisplayName": "Is outreach successful? ",          
+              "DataPath": "FirstAttempt.ContactResults",
+              "AdditionalDisplayName": null,
+              "Type": "YesNoRadioButtons",
+              "ValueType": "bool",
+              "Column": "Left",
+              "CompleteRequired": true,
+              "Validations": null,
+              "Order": 0     
+            },
+            {           
+              "Name": "ContactDate",
+              "DisplayName": "Attempt Contact Date",
+              "DataPath": "FirstAttempt.ContactDate",
+              "Description": "Date",
+              "Type":"DatePicker",
+              "ValueType": "DateTimeOffset",
+              "Column": "Left",
+              "Validations": null,
+              "Display":false,
+              "Order": 1
+            },
+            {
+              "Name": "FailedReason",
+              "DisplayName": "Reason Failed",
+              "DataPath": "FirstAttempt.FailedReason",
+              "Description": null,
+              "Type": "Dropdown",
+              "ValueType": "LookupIdentifier",
+              "DataSource": {
+                "LookupCategory": "outreachcontactfailedreasons"
+              },
+              "Column": "Right",
+              "Validations": null,
+              "Display":false,
+              "Order": 2
+            },
+            {
+              "Name": "OutreachDate",
+              "DisplayName": "Outreach Date",
+              "DataPath": "FirstAttempt.OutreachDate",
+              "Description": "Date",
+              "Type": "DatePicker",
+              "ValueType": "DateTimeOffset",
+              "Column": "Right",
+              "Validations": null,
+              "Display":false,
+              "Order": 3
+            }, 
+            {
+              "Name": "Comments",
+              "DisplayName": "Comments",
+              "DataPath": "FirstAttempt.Comments",
+              "Description": "",
+              "Type": "Textarea",
+              "ValueType": "String",
+              "Column": "Left",
+              "CompleteRequired": true,
+              "Validations": null,
+              "Display":false,
+              "Order": 4
+            }
+          ]
+        },{
+          "Level": 1,
+          "Name": "SecondAttempt",
+          "DisplayName": "Second Attempt",
+          "LinkText":"Details",
+          "EditLink": "SectionEdit",
+          "MultiEntry": false,
+          "CompleteRequired": false,
+          "Order": 10,
+          "Sections":[],
+          "Items":[
+            {
+              "Name": "ContactResults",
+              "DisplayName": "Is outreach successful? ",          
+              "DataPath": "SecondAttempt.ContactResults",
+              "AdditionalDisplayName": null,
+              "Type": "YesNoRadioButtons",
+              "ValueType": "bool",
+              "Column": "Left",
+              "CompleteRequired": true,
+              "Validations": null,
+              "Order": 0     
+            },
+            {           
+              "Name": "ContactDate",
+              "DisplayName": "Attempt Contact Date",
+              "DataPath": "SecondAttempt.ContactDate",
+              "Description": "Date",
+              "Type":"DatePicker",
+              "ValueType": "DateTimeOffset",
+              "Column": "Left",
+              "Validations": null,
+              "Display":false,
+              "Order": 1
+            },
+            {
+              "Name": "FailedReason",
+              "DisplayName": "Reason Failed",
+              "DataPath": "SecondAttempt.FailedReason",
+              "Description": null,
+              "Type": "Dropdown",
+              "ValueType": "LookupIdentifier",
+              "DataSource": {
+                "LookupCategory": "outreachcontactfailedreasons"
+              },
+              "Column": "Right",
+              "Validations": null,
+              "Display":false,
+              "Order": 2
+            },
+            {
+             "Name": "OutreachDate",
+              "DisplayName": "Outreach Date",
+              "DataPath": "SecondAttempt.OutreachDate",
+              "Description": "Date",
+              "Type": "DatePicker",
+              "ValueType": "DateTimeOffset",
+              "Column": "Right",
+              "Validations": null,
+              "Display":false,
+              "Order": 3
+            }, 
+            {
+              "Name": "Comments",
+              "DisplayName": "Comments",
+              "DataPath": "SecondAttempt.Comments",
+              "Description": "",
+              "Type": "Textarea",
+              "ValueType": "String",
+              "Column": "Left",
+              "CompleteRequired": true,
+              "Validations": null,
+              "Display":false,
+              "Order": 4
+            }
+          ]
+        }
+      ],
+      "Items":[]
+    }, {
+      "Level": 0,
+      "Name": "InitialScreening",
+      "DisplayName": "Initial Screening",
+      "MultiEntry": false,
+      "CompleteRequired": true,
+      "Order": 10,
+      "Sections": [],
+      "OuterLink":{ 
+        "LinkText":"Details",
+        "LinkPath": "/PraPlusAssessments/PraPlusAssessment/List",
+        "LinkType": "OtherModule",
+      },
+      "Items": [
+        {
+          "Name": "ScreeningDate",
+          "DataPath": "InitialScreeningDate",
+          "DisplayName": "Screening Date:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "Column":"Left",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0
+        }, {
+          "Name": "Score",
+          "DataPath": "InitialScreeningScoreFormatted",
+          "DisplayName": "Score:",
+          "Type": "String",
+          "ValueType": "string",
+          //"ValueType": "LookupIdentifier",
+          "Column":"Right",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 10
+        },{
+          "Name": "LTSS Score",
+          "DataPath": "InitialScreeningLtssScoreFormatted",
+          "DisplayName": "LTSS Score:",
+          "Type": "String",
+          "ValueType": "string",
+          //"ValueType": "LookupIdentifier",
+          "Column":"Right",
+          "IsRequired": false,
+          "ReadOnly": true,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 20
+        }
+      ]
+    }, {
+      "Level": 0,
+      "Name": "InitialVisit",
+      "DisplayName": "Initial Visit",
+      "MultiEntry": false,
+      "CompleteRequired": true,
+      "Order": 10,
+      "Sections": [],
+      "EditLink": "SectionEdit",
+      "LinkText":"Details",
+      "Items": [
+        {
+          "Name": "InitialVisitDate",
+          "DataPath": "InitialVisitDate",
+          "DisplayName": "Scheduled Date/Time of Initial visit:",
+          "Type": "DateTimePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": true,
+          "DisplayFormat":"MM/DD/YYYY hh:mm A",
+          "Column":"Left",
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 0,
+        },
+        {
+          "Name": "InitialVisitLocation",
+          "DataPath": "InitialVisitLocation",
+          "DisplayName": "Location:",
+          "Type": "TextBox",
+          "ValueType": "string",
+          "IsRequired": true,
+          "Column":"Right",
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 1,
+        },
+        {
+          "Name": "InitialVisitComments",
+          "DataPath": "InitialVisitComments",
+          "DisplayName": "Comments:",
+          "Type": "Textarea",
+          "ValueType": "string",
+          "IsRequired": false,
+          "CompleteRequired": false,
+          "Validations": null,
+          "Order": 2,
+        }
+      ]
+    }, {
+      "Level": 0,
+      "Name": "Letter",
+      "DisplayName": "Letter",
+      "MultiEntry": false,
+      "CompleteRequired": true,
+      "Order": 10,
+      "Sections": [],
+      "OuterLink":{
+        "LinkText":"Details",
+        "LinkPath": "/Letters/WaiverLetter/ListAll",
+        "LinkType": "OtherModule",
+      },
+      "Items": [
+        {
+          "Name": "WelcomeLetterDate",
+          "DataPath": "WelcomeLetterDate",
+          "DisplayName": "Welcome Letter:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "CompleteRequired": false,
+          "Validations": null,
+        },
+        {
+          "Name": "UtrLetterDate",
+          "DataPath": "UtrLetterDate",
+          "DisplayName": "Unable to Reach Letter:",
+          "Type": "DatePicker",
+          "ValueType": "DateTimeOffset",
+          "IsRequired": false,
+          "CompleteRequired": false,
+          "Validations": null,
+        }
+      ]
+    }, {
+      "Level": 0,
+      "Name": "Assignment",
+      "DisplayName": "Assignment",
+      "MultiEntry": false,
+      "CompleteRequired": true,
+      "Order": 10,
+      "Sections": [
+        {
+          "Level": 1,
+          "Name": "CCAssignment",
+          "DisplayName": "Personal Care Connector Assignment",
+          "OuterLink":{
+            "LinkText":"Assign",
+            "LinkPath": "/Cma/ClientLevelStaffAssignment/List",
+            "LinkType": "OtherModule",
+          },
+          "MultiEntry": false,
+          "CompleteRequired": true,
+          "Order": 10, 
+          "Sections":[],
+          "Items":[
+            {
+              "Name": "CCAssignmentStatus",
+              "DataPath": "CCAssignmentStatus",
+              "DisplayName": "Staff assigned:",
+              "Type": "YesNoRadioButtons",
+              "ValueType": "bool",
+              "IsRequired": false,
+              "Display":false,
+              "CompleteRequired": false,
+              "Validations": null,
+            },
+            {
+              "Name": "CCAssignmentAssigned",
+              "DataPath": "CCAssignmentAssignedStaffNameFormatted",
+              "DisplayName": "Staff assigned",
+              "Type": "String",
+              "ValueType": "String",
+              "IsRequired": false,
+              "ReadOnly": true,
+              "CompleteRequired": false,
+              "Validations": null,
+            },
+            {
+              "Name": "CCAssignmentUnAssigned",
+              "DataPath": "CCAssignmentUnAssigned",
+              "DisplayName": "No assignment has been made",
+              "Type": "Label",
+              "ValueType": "String",
+              "IsRequired": false,
+              "Display":false,
+              "CompleteRequired": false,
+              "Validations": null,
+            },
+            {
+              "Name": "CCAssignmentDate",
+              "DataPath": "CCAssignmentDate",
+              "DisplayName": "Assignment Date:",
+              "Type": "DatePicker",
+              "ValueType": "DateTimeOffset",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            }
+          ]
+        },{
+          "Level": 1,
+          "Name": "CMOUAssignment",
+          "DisplayName": "Service Coordination Team Assignment",
+          "OuterLink":{
+            "LinkText":"Assign",
+            "LinkPath": "/Cma/ClientLevelOuAssignment/List",
+            "LinkType": "OtherModule",
+          },
+          "MultiEntry": false,
+          "CompleteRequired": true,
+          "Order": 10, 
+          "Sections":[],
+          "Items":[
+            {
+              "Name": "CMOUAssignmentStatus",
+              "DataPath": "CCAssignmentStatus",
+              "DisplayName": "Staff assigned:",
+              "Type": "YesNoRadioButtons",
+              "ValueType": "bool",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            },
+            {
+              "Name": "CMOUAssignmentAssigned",
+              "DataPath": "CMOUAssignmentAssignedOu",
+              "DisplayName": "SC Team Assigned",
+              "Type": "String",
+              "ValueType": "String",
+              "IsRequired": false,
+              "ReadOnly": true,
+              "CompleteRequired": false,
+              "Validations": null,
+            },
+            {
+              "Name": "CMOUAssignmenttUnAssigned",
+              "DataPath": "CMOUAssignmenttUnAssigned",
+              "DisplayName": "No assignment has been made",
+              "Type": "Label",
+              "ValueType": "String",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            },
+            {
+              "Name": "CMOUAssignmentDate",
+              "DataPath": "CMOUAssignmentDate",
+              "DisplayName": "Assignment Date:",
+              "Type": "DatePicker",
+              "ValueType": "DateTimeOffset",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            }
+          ]
+        },{
+          "Level": 1,
+          "Name": "SCAssignment",
+          "DisplayName": "Service Coordinator Assignment",
+          "OuterLink":{
+            "LinkText":"Assign",
+            "LinkPath": "/Cma/ClientLevelStaffAssignment/List",
+            "LinkType": "OtherModule",
+          },
+          "MultiEntry": false,
+          "CompleteRequired": true,
+          "Order": 10, 
+          "Sections":[],
+          "Items":[
+            {
+              "Name": "SCAssignmentStatus",
+              "DataPath": "SCAssignmentStatus",
+              "DisplayName": "Staff assigned:",
+              "Type": "YesNoRadioButtons",
+              "ValueType": "bool",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            },
+            {
+              "Name": "SCAssignmentAssigned",
+              "DataPath": "SCAssignmentAssignedStaffNameFormatted",
+              "DisplayName": "Staff assigned",
+              "Type": "String",
+              "ValueType": "String",
+              "IsRequired": false,
+              "ReadOnly": true,
+              "CompleteRequired": false,
+              "Validations": null,
+            },
+            {
+              "Name": "SCAssignmenttUnAssigned",
+              "DataPath": "SCAssignmenttUnAssigned",
+              "DisplayName": "No assignment has been made",
+              "Type": "Label",
+              "ValueType": "String",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            },
+            {
+              "Name": "SCAssignmentDate",
+              "DataPath": "SCAssignmentDate",
+              "DisplayName": "Assignment Date:",
+              "Type": "DatePicker",
+              "ValueType": "DateTimeOffset",
+              "IsRequired": false,
+              "CompleteRequired": false,
+              "Display":false,
+              "Validations": null,
+            }
+          ]
+        }
+      ],
+      "Items": []
+    }, {
+    "Level": 0,
+    "Name": "CheckInOutHistory",
+    "MultiEntry": true,
+    "DisplayName": "Check in/out history",
+    "Order": 80,
+    "Sections": [],
+    "Items": [
+     {   
+        "Name": "CheckedType",
+        "DisplayName": "CheckedType",
+        "Type": "Dropdown",
+        "ValueType": "LookupIdentifier",
+        "IsRequired": false,
+        "ReadOnly": true,
+        "CompleteRequired": false,
+        "Validations": null,
+        "Order": 10
+      },  {   
+        "Name": "CheckedBy",
+        "DisplayName": "Checked By",
+        "DataPath": "CheckedBy.FullName",
+        "Type": "TextBox",
+        "ValueType": "string",
+        "IsRequired": false,
+        "ReadOnly": true,
+        "CompleteRequired": false,
+        "Validations": null,
+        "Order": 20
+      },
+      {
+        "Name":"Comments",
+        "DisplayName":"Comments",
+        "Type": "TextBox",
+        "ValueType": "string",
+        "IsRequired": false,
+        "CompleteRequired": false,
+        "Validations": null,
+        "Order": 0
+      },
+      {
+        "Name":"CheckedTimestamp",
+        "DisplayName":"Checked time",
+        "Type": "DateTimePicker",
+        "ValueType": "DateTimeOffset",
+        "DisplayFormat":"MM/DD/YYYY hh:mm:SS A",
+        "IsRequired": false,
+        "CompleteRequired": false,
+        "Validations": null,
+        "Order": 20
+      }
+    ]
+  }
+]
+
+export default sections;
